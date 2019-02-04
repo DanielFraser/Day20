@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@*<form action="/Form/FormOne" method="post">
+        <div class="container">
+            <input type="text" name="user" /> <br />
+            <input type="text" name="pass" /> <br />
+            <input type="submit" value="Login" />
+        </div>
+
+    </form>*@
+<div class="text-center">
+    <form method="POST" class="form-group">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="user" class="sr-only">Email address</label>
+        <input name="user" type="text" id="user" class="form-control center-block" style="margin-bottom: 20px" placeholder="Email address" required="" autofocus="">
+        <label for="pass" class="sr-only">Password</label>
+        <input name="pass" type="password" id="pass" class="form-control center-block" style="margin-bottom: 20px" placeholder="Password" required="">
+        <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+    </form>
+</div>
+
+

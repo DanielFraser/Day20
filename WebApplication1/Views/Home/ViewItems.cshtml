@@ -1,0 +1,30 @@
+﻿@using WebApplication1.Controllers
+@model List<joinedTbl>
+
+@{
+    ViewBag.Title = "ViewItems";
+}
+
+<h2>View Items</h2>
+
+<table class="table table-striped table-bordered dt-responsive nowrap" id="joinTbl">
+    <thead>
+        <tr>
+            @foreach (var col in Model[0].GetType().GetProperties())
+            {
+                <th>@col.Name</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @foreach (var props in item.GetType().GetProperties())
+                {
+                    <td>@item.GetType().GetProperty(props.Name).GetValue(item)</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
